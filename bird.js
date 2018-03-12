@@ -6,12 +6,15 @@ function CtBird() {
 
  this.show = function () {
 
+  //wenn das Spiel läuft, soll der Vogel fallen
   if(ctScore.gameStatus == 1) {
 
+   //die Fallgeschwindigkeit wird erhöht, allerdings gibt es aufgrund der Spielbarkeit eine Beschränkung
    if(this.speed < 10) {
     this.speed += this.acceleration;
    }
 
+   //falls der Vogel nicht tot ist, die Position wird verändert
    if(this.y < canvasHeight) {
     this.y += this.speed;
    } else {
@@ -19,6 +22,7 @@ function CtBird() {
    }
   }
 
+  //Vogel zeichnen
   stroke(35,75,89);
   strokeWeight(2);
   fill(247,183,49);
@@ -26,6 +30,8 @@ function CtBird() {
  }
 
  this.jump = function() {
+  
+  //wenn das Spiel läuft und sich der Vogel im Bild befindet, darf gesprungen werden
   if (ctScore.gameStatus == 1 && this.y > 0) {
    this.speed = -7.5;
   }
