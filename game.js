@@ -19,8 +19,8 @@ function preload() {
     scoreFont = loadFont('./font.ttf');
 }
 
+//diese p5.js-Standardfunktion wird zum Start einmal ausgeführt
 function setup() {
-
     //die Leinwand wird erzeugt
     createCanvas(canvasWidth, canvasHeight);
 
@@ -29,6 +29,7 @@ function setup() {
     ctScore = new CtScore();
 }
 
+//diese p5.js-Standardfunktion wird Frame für Frame erneut ausgeführt
 function draw() {
     //Hintergrund
     background(79,191,203);
@@ -50,7 +51,6 @@ function draw() {
 
         //durch alle Röhren iterieren
         for(var i = ctPipes.length - 1; i >= 0; i--) {
-
             //Röhre anzeigen
             ctPipes[i].show();
 
@@ -79,12 +79,10 @@ function draw() {
 
 }
 
-//in dieser Funktion werden alle Tastendrücke abgefangen
+//dieses p5.js-Standardfunktion fängt alle Tastendrücke ab
 function keyPressed() {
-
     //die Leertaste wird gedrückt
     if (keyCode == 32) {
-
         //wenn das Spiel noch nicht gestartet ist, sorgt Druck auf die Leertaste für den Start des Spiels
         if (ctScore.gameStatus == 0) {
             ctScore.gameStatus = 1;
