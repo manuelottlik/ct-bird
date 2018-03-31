@@ -1,2 +1,2 @@
 # ct-bird
-Beispielprojekt zum Artikel "" aus c't 2018, Heft xy. ct.de/@@@@
+Beispielprojekt zum Artikel "Fliegende Objekte" aus c't 2018, Heft 8. ct.de/yxqb
